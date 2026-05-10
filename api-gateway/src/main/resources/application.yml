@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: resume-service
+          uri: lb://resume-service
+          predicates:
+            - Path=/api/resume/**
+          filters:
+            - RewritePath=/api/(?<segment>.*), /${segment}
+        - id: job-service
+          uri: lb://job-service
+          predicates:
+            - Path=/api/jobs/**
+          filters:
+            - RewritePath=/api/(?<segment>.*), /${segment}
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka

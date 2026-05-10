@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sentence-transformers
+scikit-learn
+numpy
+torch
+spacy
+pydantic
+requests
+scipy
+transformers
+keybert
+sentencepiece

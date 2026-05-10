@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3b3fed18-92e8-4c48-8443-9faffc266db0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway/security/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/AuthServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/dto/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/dto/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/dto/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/security/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/controller/JobController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/entity/Job.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/exception/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/exception/JobNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/repository/JobRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/service/JobService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matcher-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matcher-service/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matcher-service/app/model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matcher-service/app/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matcher-service/app/service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matcher-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matcher-service/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/client/JobClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/client/MatcherClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/controller/ResumeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/dto/JobDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/dto/MatchRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/dto/MatchResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/entity/Resume.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/exception/FileProcessingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/exception/ResumeNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/repository/ResumeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/service/ResumeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/util/ResumeParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sapan/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/sapanbhandari/IdeaProjects/nimbusflow" value="3DFihfGfJPmAI3w1L4AEif31nrG" />
+    </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3DFihfGfJPmAI3w1L4AEif31nrG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApiGatewayApplication.executor": "Run",
+    "Application.DiscoveryServerApplication.executor": "Run",
+    "Application.GreetingServiceApplication.executor": "Run",
+    "Application.JobServiceApplication.executor": "Run",
+    "Application.ResumeServiceApplication.executor": "Run",
+    "Application.TestClass.executor": "Run",
+    "Maven.api-gateway [clean,install].executor": "Run",
+    "Maven.api-gateway [clean,package].executor": "Run",
+    "Maven.discovery-server [clean,install].executor": "Run",
+    "Maven.discovery-server [clean,package].executor": "Run",
+    "Maven.job-service [clean,install].executor": "Run",
+    "Maven.job-service [clean,package].executor": "Run",
+    "Maven.matcher-service [clean,install].executor": "Run",
+    "Maven.matcher-service [clean,package].executor": "Run",
+    "Maven.nimbusflow [clean,install].executor": "Run",
+    "Maven.nimbusflow [clean,package].executor": "Run",
+    "Maven.nimbusflow [clean].executor": "Run",
+    "Maven.resume-service [clean,install].executor": "Run",
+    "Maven.resume-service [clean,package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/sapanbhandari/IdeaProjects/nimbusflow/api-gateway",
+    "onboarding.tips.debug.path": "/Users/sapanbhandari/IdeaProjects/nimbusflow/auth-service/src/main/java/com/sapan/Main.java",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api-gateway" />
+      <recent name="$PROJECT_DIR$/job-service" />
+      <recent name="$PROJECT_DIR$/discovery-server" />
+      <recent name="$PROJECT_DIR$/auth-service" />
+      <recent name="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/matcher-service/app" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ApiGatewayApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sapan.gateway.ApiGatewayApplication" />
+      <module name="api-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sapan.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sapan.discovery.DiscoveryServerApplication" />
+      <module name="discovery-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sapan.discovery.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JobServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sapan.job.JobServiceApplication" />
+      <module name="job-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sapan.job.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResumeServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sapan.resume.ResumeServiceApplication" />
+      <module name="resume-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sapan.resume.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ResumeServiceApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.JobServiceApplication" />
+        <item itemvalue="Application.DiscoveryServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b3fed18-92e8-4c48-8443-9faffc266db0" name="Changes" comment="" />
+      <created>1777884339070</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777884339070</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
