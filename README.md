@@ -35,44 +35,29 @@ The system performs:
 
 Architecture
 
-                         +----------------------+
-                         |      Frontend        |
-                         | React + NGINX        |
-                         +----------+-----------+
-                                    |
-                                    v
-                         +----------+-----------+
-                         | Kubernetes Ingress   |
-                         | NGINX Controller     |
-                         +----------+-----------+
-                                    |
-                                    v
-                         +----------+-----------+
-                         |     API Gateway      |
-                         | Spring Cloud Gateway |
-                         +-----+----------+-----+
-                               |          |
-        --------------------------------------------------------
-        |                 |                |                   |
-        v                 v                v                   v
-+----------------+ +----------------+ +----------------+ +----------------+
-| Resume Service | |   Job Service  | |  Auth Service  | | Matcher Service|
-| Spring Boot    | | Spring Boot    | | Spring Boot    | | FastAPI + AI   |
-+--------+-------+ +--------+-------+ +--------+-------+ +--------+-------+
-|                  |                  |                   |
------------------------------------------------------------
-|
-v
-+----------------+
-| PostgreSQL DB  |
-+----------------+
------------------------------------------------------------
-|
-v
-+-------------------------------+
-| Prometheus + Grafana Stack    |
-| Metrics + Observability       |
-+-------------------------------+
+graph TD
+FE[Frontend\nReact + NGINX]
+ING[Kubernetes Ingress\nNGINX Controller]
+GW[API Gateway\nSpring Cloud Gateway]
+RS[Resume Service\nSpring Boot]
+JS[Job Service\nSpring Boot]
+AS[Auth Service\nSpring Boot]
+MS[Matcher Service\nFastAPI + AI]
+DB[(PostgreSQL)]
+OBS[Prometheus + Grafana\nObservability Stack]
+FE --> ING
+ING --> GW
+GW --> RS
+GW --> JS
+GW --> AS
+GW --> MS
+RS --> DB
+JS --> DB
+AS --> DB
+OBS --> RS
+OBS --> JS
+OBS --> AS
+OBS --> GW
 
 ⸻
 
