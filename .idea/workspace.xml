@@ -5,72 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b3fed18-92e8-4c48-8443-9faffc266db0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway/security/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/AuthServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/dto/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/dto/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/dto/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/security/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/controller/JobController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/entity/Job.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/exception/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/exception/JobNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/repository/JobRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-service/src/main/java/com/sapan/job/service/JobService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/matcher-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/matcher-service/app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/matcher-service/app/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/matcher-service/app/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/matcher-service/app/service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/matcher-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/matcher-service/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/client/JobClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/client/MatcherClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/controller/ResumeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/dto/JobDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/dto/MatchRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/dto/MatchResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/entity/Resume.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/exception/FileProcessingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/exception/ResumeNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/repository/ResumeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/service/ResumeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/java/com/sapan/resume/util/ResumeParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resume-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sapan/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/api-gateway/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/api-gateway/service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/auth-service/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/auth-service/service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/configmap.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/discovery-server/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/discovery-server/service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/frontend/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/frontend/service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/ingress/ingress.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/job-service/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/job-service/service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/matcher-service/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/matcher-service/service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/monitoring/api-gateway-monitor.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/monitoring/auth-service-monitor.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/monitoring/discovery-server-monitor.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/monitoring/job-service-monitor.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/monitoring/resume-service-monitor.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/namespace.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/postgres/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/postgres/persistent-volume-claim.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/postgres/persistent-volume.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/postgres/service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/resume-service/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/resume-service/service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/secret.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway/security/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway/security/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway/security/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/sapan/auth/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/target/classes/com/sapan/discovery/DiscoveryServerApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/target/discovery-server-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/target/discovery-server-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/job-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/job-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resume-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/resume-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +79,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Sapan-Bhandari&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Sapan-Bhandari/nimbusflow-backend.git&quot;,
+    &quot;accountId&quot;: &quot;f22d46b5-5369-4a9f-bbbf-1c30d6a8bff5&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -124,20 +123,20 @@
     "Maven.resume-service [clean,package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/sapanbhandari/IdeaProjects/nimbusflow/api-gateway",
+    "last_opened_file_path": "/Users/sapanbhandari/IdeaProjects/nimbusflow/k8s/resume-service",
     "onboarding.tips.debug.path": "/Users/sapanbhandari/IdeaProjects/nimbusflow/auth-service/src/main/java/com/sapan/Main.java",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/api-gateway" />
-      <recent name="$PROJECT_DIR$/job-service" />
-      <recent name="$PROJECT_DIR$/discovery-server" />
-      <recent name="$PROJECT_DIR$/auth-service" />
-      <recent name="$PROJECT_DIR$/api-gateway/src/main/java/com/sapan/gateway" />
+      <recent name="$PROJECT_DIR$/k8s/resume-service" />
+      <recent name="$PROJECT_DIR$/k8s/postgres" />
+      <recent name="$PROJECT_DIR$/k8s/matcher-service" />
+      <recent name="$PROJECT_DIR$/k8s/job-service" />
+      <recent name="$PROJECT_DIR$/k8s/frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/matcher-service/app" />

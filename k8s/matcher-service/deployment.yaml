@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: matcher-service
+  namespace: nimbusflow
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: matcher-service
+
+  template:
+    metadata:
+      labels:
+        app: matcher-service
+
+    spec:
+      containers:
+
+        - name: matcher-service
+
+          image: sapan18/matcher-service:v1
+
+          ports:
+            - containerPort: 8000
+
+          env:
+            - name: OLLAMA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: nimbusflow-config
+                  key: OLLAMA_URL
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+
+            initialDelaySeconds: 60
+            periodSeconds: 10
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+
+            initialDelaySeconds: 30
+            periodSeconds: 10

@@ -5,30 +5,23 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import org.springframework.security.config.annotation.
-        web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
-import org.springframework.security.config.http.
-        SessionCreationPolicy;
+import org.springframework.security.config.http.SessionCreationPolicy;
 
-import org.springframework.security.crypto.bcrypt.
-        BCryptPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import org.springframework.security.crypto.password.
-        PasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-import org.springframework.security.web.
-        SecurityFilterChain;
+import org.springframework.security.web.SecurityFilterChain;
 
-import org.springframework.security.web.authentication.
-        UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final JwtAuthenticationFilter
-            jwtAuthenticationFilter;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean
     public SecurityFilterChain securityFilterChain(
@@ -37,19 +30,22 @@ public class SecurityConfig {
 
         http
 
+                // Disable CSRF
                 .csrf(csrf -> csrf.disable())
 
+                // Stateless JWT
                 .sessionManagement(session ->
-
                         session.sessionCreationPolicy(
                                 SessionCreationPolicy.STATELESS
                         )
                 )
 
+                // Public routes
                 .authorizeHttpRequests(auth -> auth
 
                         .requestMatchers(
-                                "/auth/**"
+                                "/auth/**",
+                                "/actuator/**"
                         )
 
                         .permitAll()
@@ -59,10 +55,9 @@ public class SecurityConfig {
                         .authenticated()
                 )
 
+                // JWT filter
                 .addFilterBefore(
-
                         jwtAuthenticationFilter,
-
                         UsernamePasswordAuthenticationFilter.class
                 );
 

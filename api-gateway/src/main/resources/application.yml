@@ -4,27 +4,83 @@ server:
 spring:
   application:
     name: api-gateway
+
   cloud:
     gateway:
       routes:
+
+        # -----------------------------------
+        # Resume Service
+        # -----------------------------------
+
         - id: resume-service
-          uri: lb://resume-service
+
+          uri: http://resume-service:8081
+
           predicates:
             - Path=/api/resume/**
+
           filters:
             - RewritePath=/api/(?<segment>.*), /${segment}
+
+        # -----------------------------------
+        # Job Service
+        # -----------------------------------
+
         - id: job-service
-          uri: lb://job-service
+
+          uri: http://job-service:8082
+
           predicates:
             - Path=/api/jobs/**
+
           filters:
             - RewritePath=/api/(?<segment>.*), /${segment}
+
+        # -----------------------------------
+        # Auth Service
+        # -----------------------------------
+
         - id: auth-service
-          uri: lb://auth-service
+
+          uri: http://auth-service:8084
+
           predicates:
             - Path=/auth/**
+
+# -----------------------------------
+# Eureka Discovery
+# -----------------------------------
 
 eureka:
   client:
     service-url:
       defaultZone: http://discovery-server:8761/eureka
+
+# -----------------------------------
+# Actuator / Observability
+# -----------------------------------
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus,gateway
+
+  endpoint:
+    health:
+      show-details: always
+
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# -----------------------------------
+# Logging
+# -----------------------------------
+
+logging:
+  level:
+    org.springframework.cloud.gateway: INFO
+    reactor.netty.http.client: INFO

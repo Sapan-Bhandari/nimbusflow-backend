@@ -8,14 +8,14 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.security.authentication.
-        UsernamePasswordAuthenticationToken;
+import org.springframework.security.authentication
+        .UsernamePasswordAuthenticationToken;
 
-import org.springframework.security.core.authority.
-        SimpleGrantedAuthority;
+import org.springframework.security.core.authority
+        .SimpleGrantedAuthority;
 
-import org.springframework.security.core.context.
-        SecurityContextHolder;
+import org.springframework.security.core.context
+        .SecurityContextHolder;
 
 import org.springframework.stereotype.Component;
 
@@ -42,6 +42,30 @@ public class JwtAuthenticationFilter
 
             throws ServletException, IOException {
 
+        // -----------------------------------
+        // Skip JWT validation for public APIs
+        // -----------------------------------
+
+        String path = request.getServletPath();
+
+        if (
+                path.startsWith("/auth/")
+                        ||
+                        path.startsWith("/actuator/")
+        ) {
+
+            filterChain.doFilter(
+                    request,
+                    response
+            );
+
+            return;
+        }
+
+        // -----------------------------------
+        // Read Authorization Header
+        // -----------------------------------
+
         String authHeader =
                 request.getHeader(
                         "Authorization"
@@ -60,6 +84,10 @@ public class JwtAuthenticationFilter
 
             return;
         }
+
+        // -----------------------------------
+        // Extract JWT Token
+        // -----------------------------------
 
         String token =
                 authHeader.substring(7);

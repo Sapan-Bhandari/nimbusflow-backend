@@ -123,3 +123,44 @@ coverage/
 # -----------------------------------
 
 Thumbs.db
+
+# -----------------------------------
+# Kubernetes
+# -----------------------------------
+
+# Temporary Kubernetes files
+*.bak
+*.tmp
+
+# Local kube config (optional)
+.kube/
+
+# Helm
+*.tgz
+
+# Terraform (future)
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+
+# -----------------------------------
+# Observability
+# -----------------------------------
+
+grafana.db
+
+# Prometheus
+prometheus.yml
+
+# -----------------------------------
+# Kubernetes Secrets / Configs
+# -----------------------------------
+
+secrets.yaml
+*.secret.yaml
+
+# -----------------------------------
+# Helm
+# -----------------------------------
+
+charts/

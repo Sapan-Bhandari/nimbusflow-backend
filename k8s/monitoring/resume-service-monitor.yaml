@@ -1,0 +1,23 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+
+metadata:
+  name: resume-service-monitor
+  namespace: monitoring
+
+  labels:
+    release: monitoring
+
+spec:
+  selector:
+    matchLabels:
+      app: resume-service
+
+  namespaceSelector:
+    matchNames:
+      - nimbusflow
+
+  endpoints:
+    - port: http
+      path: /actuator/prometheus
+      interval: 15s

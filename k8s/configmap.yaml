@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: nimbusflow-config
+  namespace: nimbusflow
+
+data:
+  POSTGRES_DB: nimbusflow
+
+  SPRING_PROFILES_ACTIVE: docker
+
+  EUREKA_SERVER_URL: http://discovery-server:8761/eureka
+
+  OLLAMA_URL: http://host.docker.internal:11434/api/generate
