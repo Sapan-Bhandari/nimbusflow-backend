@@ -18,6 +18,8 @@ The platform combines:
 * JWT Authentication
 * API Gateway
 * Dockerized Infrastructure
+* Kubernetes Orchestration
+* Prometheus & Grafana Observability
 * Production-ready Containerization
 
 The system performs:
@@ -33,31 +35,44 @@ The system performs:
 
 Architecture
 
-                         +----------------+
-                         |    Frontend    |
-                         | React + JWT UI |
-                         +--------+-------+
-                                  |
-                                  v
-                        +---------+----------+
-                        |     API Gateway    |
-                        | Spring Cloud GW    |
-                        +----+---------+-----+
-                             |         |
-         ---------------------------------------------------
-         |                  |                 |             |
-         v                  v                 v             v
-+----------------+  +----------------+  +-------------+  +----------------+
-| Resume Service |  |   Job Service  |  | Auth Service|  | Matcher Service|
-| Spring Boot    |  | Spring Boot    |  | Spring Boot |  | FastAPI + AI   |
-+--------+-------+  +--------+-------+  +------+------+  +--------+-------+
-|                   |                    |                 |
+                         +----------------------+
+                         |      Frontend        |
+                         | React + NGINX        |
+                         +----------+-----------+
+                                    |
+                                    v
+                         +----------+-----------+
+                         | Kubernetes Ingress   |
+                         | NGINX Controller     |
+                         +----------+-----------+
+                                    |
+                                    v
+                         +----------+-----------+
+                         |     API Gateway      |
+                         | Spring Cloud Gateway |
+                         +-----+----------+-----+
+                               |          |
+        --------------------------------------------------------
+        |                 |                |                   |
+        v                 v                v                   v
++----------------+ +----------------+ +----------------+ +----------------+
+| Resume Service | |   Job Service  | |  Auth Service  | | Matcher Service|
+| Spring Boot    | | Spring Boot    | | Spring Boot    | | FastAPI + AI   |
++--------+-------+ +--------+-------+ +--------+-------+ +--------+-------+
+|                  |                  |                   |
 -----------------------------------------------------------
 |
 v
 +----------------+
 | PostgreSQL DB  |
 +----------------+
+-----------------------------------------------------------
+|
+v
++-------------------------------+
+| Prometheus + Grafana Stack    |
+| Metrics + Observability       |
++-------------------------------+
 
 ⸻
 
@@ -94,10 +109,13 @@ Security
 Cloud-Native Features
 
 * Dockerized microservices
+* Kubernetes deployments
+* Ingress routing
+* ConfigMaps & Secrets
+* Production frontend with NGINX
 * Health checks
 * Environment-based configuration
 * Production-ready containerization
-* Observability-ready setup
 
 ⸻
 
@@ -131,13 +149,21 @@ Frontend
 * Tailwind CSS
 * Axios
 * JWT Integration
+* NGINX
 
-DevOps
+DevOps & Cloud-Native Stack
 
 * Docker
 * Docker Compose
-* Health Checks
+* Kubernetes
+* NGINX Ingress
+* Prometheus
+* Grafana
+* Spring Boot Actuator
+* Micrometer
 * Multi-stage Docker Builds
+* Service Discovery
+* Containerized Infrastructure
 
 ⸻
 
@@ -193,6 +219,86 @@ Example Match Response
 
 ⸻
 
+Cloud-Native Infrastructure
+
+NimbusFlow is fully containerized and deployed using Kubernetes with production-style infrastructure components.
+
+Implemented Infrastructure
+
+* Kubernetes Deployments
+* Kubernetes Services
+* ConfigMaps & Secrets
+* NGINX Ingress Controller
+* ClusterIP Networking
+* Dockerized Microservices
+* Production Frontend with NGINX
+* Prometheus Monitoring
+* Grafana Dashboards
+* Spring Boot Actuator Metrics
+* Micrometer Instrumentation
+* Service Discovery with Eureka
+
+⸻
+
+Observability Stack
+
+NimbusFlow includes enterprise-grade observability using Prometheus and Grafana.
+
+Monitoring Features
+
+* JVM Metrics Monitoring
+* Spring Boot APM Metrics
+* HTTP Request Metrics
+* Kubernetes Pod Monitoring
+* CPU & Memory Metrics
+* Service Health Monitoring
+* Prometheus Service Discovery
+* Grafana Dashboards
+
+Observability Stack
+
+* Prometheus
+* Grafana
+* Spring Boot Actuator
+* Micrometer
+* Kubernetes ServiceMonitors
+
+⸻
+
+Kubernetes Deployment
+
+NimbusFlow is deployed on Kubernetes using production-style cloud-native infrastructure.
+
+Kubernetes Components
+
+* Deployments
+* Services
+* ConfigMaps
+* Secrets
+* Ingress Controller
+* Service Discovery
+* ClusterIP Networking
+* Health Probes
+* Observability Integration
+
+Ingress Access
+
+Frontend:
+
+http://nimbusflow.local
+
+Monitoring
+
+Grafana:
+
+http://localhost:3001
+
+Prometheus:
+
+http://localhost:9090
+
+⸻
+
 Local Development Setup
 
 Prerequisites
@@ -207,6 +313,8 @@ Install:
 * PostgreSQL
 * Node.js
 * Ollama
+* Kubernetes
+* Helm
 
 ⸻
 
@@ -252,17 +360,12 @@ docker compose down
 
 API Endpoints
 
-Gateway
-
-http://localhost:8080
-
-Swagger / FastAPI Docs
-
-http://localhost:8000/docs
-
-Eureka Dashboard
-
-http://localhost:8761
+Component	URL
+API Gateway	http://localhost:8080
+FastAPI Docs	http://localhost:8000/docs
+Eureka Dashboard	http://localhost:8761
+Grafana	http://localhost:3001
+Prometheus	http://localhost:9090
 
 ⸻
 
@@ -287,7 +390,7 @@ NimbusFlow currently supports:
 * Secure endpoint protection
 * Token-based authorization
 
-Future roadmap:
+Future Security Enhancements
 
 * Google OAuth Login
 * Refresh Tokens
@@ -298,37 +401,44 @@ Future roadmap:
 
 Future Enhancements
 
-Kubernetes
-
-* Deployments
-* Services
-* ConfigMaps
-* Secrets
-* Ingress
-* Autoscaling
-
-Observability
-
-* Prometheus
-* Grafana
-* Loki
-* OpenTelemetry
-* Distributed tracing
-
-CI/CD
-
-* GitHub Actions
-* Docker Hub automation
-* Kubernetes deployment pipeline
-* Security scanning
-
 AI Enhancements
 
 * Vector database integration
 * RAG pipelines
-* Async Kafka-based matching
-* Multi-model orchestration
 * Fine-tuned ATS models
+* Multi-model orchestration
+
+Scalability
+
+* Horizontal Pod Autoscaling
+* Kafka-based async processing
+* Redis caching
+* Distributed tracing with OpenTelemetry
+
+CI/CD
+
+* GitHub Actions pipeline
+* Automated Kubernetes deployments
+* Security scanning
+* Automated testing pipeline
+
+Logging & Tracing
+
+* Loki centralized logging
+* OpenTelemetry tracing
+* Distributed tracing dashboards
+
+⸻
+
+Screenshots
+
+Recommended screenshots to include:
+
+* Grafana Spring Boot APM Dashboard
+* Kubernetes Pods & Services
+* Prometheus Targets
+* Application UI
+* Eureka Dashboard
 
 ⸻
 
