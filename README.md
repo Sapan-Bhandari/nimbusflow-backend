@@ -33,31 +33,11 @@ The system performs:
 
 ⸻
 
-Architecture
+# Architecture
 
-graph TD
-FE[Frontend\nReact + NGINX]
-ING[Kubernetes Ingress\nNGINX Controller]
-GW[API Gateway\nSpring Cloud Gateway]
-RS[Resume Service\nSpring Boot]
-JS[Job Service\nSpring Boot]
-AS[Auth Service\nSpring Boot]
-MS[Matcher Service\nFastAPI + AI]
-DB[(PostgreSQL)]
-OBS[Prometheus + Grafana\nObservability Stack]
-FE --> ING
-ING --> GW
-GW --> RS
-GW --> JS
-GW --> AS
-GW --> MS
-RS --> DB
-JS --> DB
-AS --> DB
-OBS --> RS
-OBS --> JS
-OBS --> AS
-OBS --> GW
+<p align="center">
+  <img src="docs/architecture.png" alt="NimbusFlow Architecture" width="1000"/>
+</p>
 
 ⸻
 
@@ -415,15 +395,71 @@ Logging & Tracing
 
 ⸻
 
-Screenshots
+# Screenshots
 
-Recommended screenshots to include:
+---
 
-* Grafana Spring Boot APM Dashboard
-* Kubernetes Pods & Services
-* Prometheus Targets
-* Application UI
-* Eureka Dashboard
+## System Architecture
+
+<p align="center">
+  <img src="docs/architecture.png" alt="NimbusFlow Architecture" width="1000"/>
+</p>
+
+---
+
+## Application Dashboard
+
+<p align="center">
+  <img src="docs/Dashboard1.png" alt="Application Dashboard 1" width="1000"/>
+</p>
+
+<p align="center">
+  <img src="docs/Dashboard2.png" alt="Application Dashboard 2" width="1000"/>
+</p>
+
+<p align="center">
+  <img src="docs/Dashboard3.png" alt="Application Dashboard 3" width="1000"/>
+</p>
+
+---
+
+## Login Screen
+
+<p align="center">
+  <img src="docs/Login.png" alt="Login Screen" width="1000"/>
+</p>
+
+---
+
+## Grafana Observability Dashboard
+
+<p align="center">
+  <img src="docs/GrafanaDashboard.png" alt="Grafana Dashboard" width="1000"/>
+</p>
+
+---
+
+## Prometheus Targets
+
+<p align="center">
+  <img src="docs/PrometheusTargets.png" alt="Prometheus Targets" width="1000"/>
+</p>
+
+---
+
+## Kubernetes Pods
+
+<p align="center">
+  <img src="docs/KubernetesPods.png" alt="Kubernetes Pods" width="1000"/>
+</p>
+
+---
+
+## Eureka Discovery Dashboard
+
+<p align="center">
+  <img src="docs/EurekaDashboard.png" alt="Eureka Dashboard" width="1000"/>
+</p>
 
 ⸻
 

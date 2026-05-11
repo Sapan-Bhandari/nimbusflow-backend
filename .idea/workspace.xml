@@ -5,6 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b3fed18-92e8-4c48-8443-9faffc266db0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/Dashboard1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Dashboard2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Dashboard3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/EurekaDashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/GrafanaDashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/PrometheusTargets.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/architecture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/target/classes/application.properties" beforeDir="false" />
@@ -16,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/ingress/ingress.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/ingress/ingress.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,18 +94,18 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/sapanbhandari/IdeaProjects/nimbusflow/k8s/resume-service",
+    "last_opened_file_path": "/Users/sapanbhandari/IdeaProjects/nimbusflow/docs",
     "onboarding.tips.debug.path": "/Users/sapanbhandari/IdeaProjects/nimbusflow/auth-service/src/main/java/com/sapan/Main.java",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/k8s/resume-service" />
       <recent name="$PROJECT_DIR$/k8s/postgres" />
       <recent name="$PROJECT_DIR$/k8s/matcher-service" />
       <recent name="$PROJECT_DIR$/k8s/job-service" />
-      <recent name="$PROJECT_DIR$/k8s/frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/matcher-service/app" />

@@ -10,10 +10,10 @@ spec:
 
   rules:
 
+    # Main Application
     - host: nimbusflow.local
 
       http:
-
         paths:
 
           # Frontend
@@ -44,3 +44,18 @@ spec:
                 name: api-gateway
                 port:
                   number: 8080
+
+    # Eureka Dashboard
+    - host: eureka.nimbusflow.local
+
+      http:
+        paths:
+
+          - path: /
+            pathType: Prefix
+
+            backend:
+              service:
+                name: discovery-server
+                port:
+                  number: 8761
