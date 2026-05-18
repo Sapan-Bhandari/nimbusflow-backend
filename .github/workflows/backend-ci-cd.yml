@@ -75,16 +75,3 @@ jobs:
       - name: Push Discovery Server Image
         run: |
           docker push sapan18/discovery-server:v1
-
-      - name: Setup Kubeconfig
-        run: |
-          mkdir -p ~/.kube
-          echo "${{ secrets.KUBE_CONFIG_DATA }}" | base64 --decode > ~/.kube/config
-
-      - name: Restart Kubernetes Deployments
-        run: |
-          kubectl rollout restart deployment api-gateway -n nimbusflow
-          kubectl rollout restart deployment auth-service -n nimbusflow
-          kubectl rollout restart deployment resume-service -n nimbusflow
-          kubectl rollout restart deployment job-service -n nimbusflow
-          kubectl rollout restart deployment discovery-server -n nimbusflow
