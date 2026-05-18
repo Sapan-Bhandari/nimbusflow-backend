@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b3fed18-92e8-4c48-8443-9faffc266db0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/Dashboard1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Dashboard2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Dashboard3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/EurekaDashboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/GrafanaDashboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/PrometheusTargets.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/architecture.png" afterDir="false" />
+    <list default="true" id="3b3fed18-92e8-4c48-8443-9faffc266db0" name="Changes" comment="added prometheus dependency">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/target/classes/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/target/classes/com/sapan/discovery/DiscoveryServerApplication.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/target/discovery-server-1.0-SNAPSHOT.jar" beforeDir="false" />
@@ -26,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/ingress/ingress.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/ingress/ingress.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +170,20 @@
       <option name="presentableId" value="Default" />
       <updated>1777884339070</updated>
     </task>
+    <task id="LOCAL-00001" summary="added prometheus dependency">
+      <option name="closed" value="true" />
+      <created>1778505946781</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778505946781</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added prometheus dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="added prometheus dependency" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

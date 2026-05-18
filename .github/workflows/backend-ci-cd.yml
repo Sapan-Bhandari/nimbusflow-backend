@@ -1,0 +1,90 @@
+name: NimbusFlow Backend CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  build-and-deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Build Backend
+        run: mvn clean package -DskipTests
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # API Gateway
+      - name: Build API Gateway Image
+        run: |
+          docker build -t sapan18/api-gateway:v1 ./api-gateway
+
+      - name: Push API Gateway Image
+        run: |
+          docker push sapan18/api-gateway:v1
+
+      # Auth Service
+      - name: Build Auth Service Image
+        run: |
+          docker build -t sapan18/auth-service:v1 ./auth-service
+
+      - name: Push Auth Service Image
+        run: |
+          docker push sapan18/auth-service:v1
+
+      # Resume Service
+      - name: Build Resume Service Image
+        run: |
+          docker build -t sapan18/resume-service:v1 ./resume-service
+
+      - name: Push Resume Service Image
+        run: |
+          docker push sapan18/resume-service:v1
+
+      # Job Service
+      - name: Build Job Service Image
+        run: |
+          docker build -t sapan18/job-service:v1 ./job-service
+
+      - name: Push Job Service Image
+        run: |
+          docker push sapan18/job-service:v1
+
+      # Discovery Server
+      - name: Build Discovery Server Image
+        run: |
+          docker build -t sapan18/discovery-server:v1 ./discovery-server
+
+      - name: Push Discovery Server Image
+        run: |
+          docker push sapan18/discovery-server:v1
+
+      - name: Setup Kubeconfig
+        run: |
+          mkdir -p ~/.kube
+          echo "${{ secrets.KUBE_CONFIG_DATA }}" | base64 --decode > ~/.kube/config
+
+      - name: Restart Kubernetes Deployments
+        run: |
+          kubectl rollout restart deployment api-gateway -n nimbusflow
+          kubectl rollout restart deployment auth-service -n nimbusflow
+          kubectl rollout restart deployment resume-service -n nimbusflow
+          kubectl rollout restart deployment job-service -n nimbusflow
+          kubectl rollout restart deployment discovery-server -n nimbusflow
