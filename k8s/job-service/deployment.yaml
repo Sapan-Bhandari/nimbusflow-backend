@@ -21,7 +21,9 @@ spec:
 
         - name: job-service
 
-          image: sapan18/job-service:v2
+          image: sapan18/job-service:latest
+
+          imagePullPolicy: Always
 
           ports:
             - containerPort: 8082

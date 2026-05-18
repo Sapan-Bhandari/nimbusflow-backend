@@ -21,7 +21,9 @@ spec:
 
         - name: auth-service
 
-          image: sapan18/auth-service:v5
+          image: sapan18/auth-service:latest
+
+          imagePullPolicy: Always
 
           ports:
             - containerPort: 8084

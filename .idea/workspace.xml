@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b3fed18-92e8-4c48-8443-9faffc266db0" name="Changes" comment="added prometheus dependency">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/backend-ci-cd.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/backend-ci-cd.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/target/classes/application.properties" beforeDir="false" />
@@ -17,6 +16,13 @@
       <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/api-gateway/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/api-gateway/deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/auth-service/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/auth-service/deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/discovery-server/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/discovery-server/deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/frontend/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/frontend/deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/job-service/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/job-service/deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/matcher-service/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/matcher-service/deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/resume-service/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/resume-service/deployment.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

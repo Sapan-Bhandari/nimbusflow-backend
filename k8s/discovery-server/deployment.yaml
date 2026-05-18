@@ -21,7 +21,9 @@ spec:
 
         - name: discovery-server
 
-          image: sapan18/discovery-server:v2
+          image: sapan18/discovery-server:latest
+
+          imagePullPolicy: Always
 
           ports:
             - containerPort: 8761

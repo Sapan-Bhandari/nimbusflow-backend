@@ -21,7 +21,9 @@ spec:
 
         - name: resume-service
 
-          image: sapan18/resume-service:v2
+          image: sapan18/resume-service:latest
+
+          imagePullPolicy: Always
 
           ports:
             - containerPort: 8081

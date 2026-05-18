@@ -21,7 +21,9 @@ spec:
 
         - name: api-gateway
 
-          image: sapan18/api-gateway:v7
+          image: sapan18/api-gateway:latest
+
+          imagePullPolicy: Always
 
           ports:
             - containerPort: 8080

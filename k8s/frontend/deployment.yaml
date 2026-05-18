@@ -21,7 +21,9 @@ spec:
 
         - name: frontend
 
-          image: sapan18/nimbusflow-frontend:v4
+          image: sapan18/nimbusflow-frontend:latest
+
+          imagePullPolicy: Always
 
           ports:
             - containerPort: 80

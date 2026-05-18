@@ -21,7 +21,9 @@ spec:
 
         - name: matcher-service
 
-          image: sapan18/matcher-service:v1
+          image: sapan18/matcher-service:latest
+
+          imagePullPolicy: Always
 
           ports:
             - containerPort: 8000
