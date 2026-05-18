@@ -34,7 +34,7 @@ jobs:
       # API Gateway
       - name: Build API Gateway Image
         run: |
-          docker build -t sapan18/api-gateway:v1 ./api-gateway
+          docker build -f api-gateway/Dockerfile -t sapan18/api-gateway:v1 .
 
       - name: Push API Gateway Image
         run: |
@@ -43,7 +43,7 @@ jobs:
       # Auth Service
       - name: Build Auth Service Image
         run: |
-          docker build -t sapan18/auth-service:v1 ./auth-service
+          docker build -f auth-service/Dockerfile -t sapan18/auth-service:v1 .
 
       - name: Push Auth Service Image
         run: |
@@ -52,7 +52,7 @@ jobs:
       # Resume Service
       - name: Build Resume Service Image
         run: |
-          docker build -t sapan18/resume-service:v1 ./resume-service
+          docker build -f resume-service/Dockerfile -t sapan18/resume-service:v1 .
 
       - name: Push Resume Service Image
         run: |
@@ -61,7 +61,7 @@ jobs:
       # Job Service
       - name: Build Job Service Image
         run: |
-          docker build -t sapan18/job-service:v1 ./job-service
+          docker build -f job-service/Dockerfile -t sapan18/job-service:v1 .
 
       - name: Push Job Service Image
         run: |
@@ -70,7 +70,7 @@ jobs:
       # Discovery Server
       - name: Build Discovery Server Image
         run: |
-          docker build -t sapan18/discovery-server:v1 ./discovery-server
+          docker build -f discovery-server/Dockerfile -t sapan18/discovery-server:v1 .
 
       - name: Push Discovery Server Image
         run: |
